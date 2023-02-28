@@ -275,7 +275,10 @@
 //		return 'C';
 //}
 
-//输入一个数，计算它的二进制中有几个1。
+
+
+
+//输入一个数，计算它的二进制(补码)中有几个1。
 //#include<stdio.h>
 //int main()
 //{
@@ -285,12 +288,35 @@
 //	scanf("%d", &num);
 //	for (i = 1; i <= 32; i++)
 //	{
-//		if (((num>>1) & i) == 1)
+//		if (((num>>i) & 1) == 1)
 //			count++;
 //	}
 //	printf("%d", count);
 //	return 0;
 //}
+//#include<stdio.h>
+//int maam(int a)
+//{
+//	int count = 0;
+//	while (a)
+//	{
+//		a = a & (a - 1);
+//		count++;
+//	}
+//	return count;
+//}
+//int main()
+//{
+//	int a;
+//	scanf("%d", &a);
+//	int count = maam(a);
+//	printf("%d", count);
+//	return 0;
+//}
+
+
+
+
 
 
 //
@@ -434,13 +460,68 @@
 
 
 
+//打印乘法口诀表
+//#include<stdio.h>
+//void print_table(int a)
+//{
+//	int i, j;
+//	for (i=1;i<=a;i++)
+//	{
+//
+//		for (j=1;j<=i;j++)
+//		{
+//			printf("%-2d* %-3d=%-3d  ", i, j, i * j);
+//		}
+//		printf("\n");
+//	}
+//
+//}
+//int main()
+//{
+//	int a;
+//	scanf("%d", &a);
+//	print_table(a);
+//	return 0;
+//}
 
 
 
 
 
+//输入一个数，输出为它的每一位之和
+//#include<stdio.h>
+//int jisuan(int a)
+//{
+//	if (a > 9)
+//		return jisuan(a / 10) + a % 10;
+//	else
+//		return a;
+//}
+//int main()
+//{
+//	int a;
+//	scanf("%d", &a);
+//	int at=jisuan(a);
+//	printf("%d", at);
+//	return 0;
+//}
 
 
+//#include<stdio.h>
+//typedef struct stu
+//{
+//	int age;
+//	char arr1[10];
+//	char arr[20];
+//
+//}stu;
+//int main()
+//{
+//	struct stu s1 = { 18,"男","151515151515" };
+//	stu s2;
+//	printf("%d\n%s", s1.age,s1.arr);
+//	return 0;
+//}
 
 
 
